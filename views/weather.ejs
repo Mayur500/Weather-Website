@@ -1,0 +1,43 @@
+<%- include('./layouts/header.ejs') %>
+<body>
+   <%- include('./layouts/navbar.ejs')%>
+    <div class="main-div">
+    <form class="searching">
+   <input  type="text" placeholder="Search City" class="searchname" > 
+   <button type="submit" class="button"><i class="fa fa-search"></i></button>
+  <div class="output">
+    <div class= "dt">
+      <span class="day" id="myday"></span>
+      <span class="time " id="mytime"></span>
+    </div>
+      <input  type="text"  class="ans" readonly>
+      <span class="cel"> <sup >0</sup>C</span>
+      <p class="mood"></p>
+  </div> 
+
+</div>
+<%- include('./layouts/footer.ejs')%>
+</body>
+<script>
+    var d = new Date();
+var weekday = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
+
+ months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+var n = weekday[d.getDay()];
+document.getElementById("myday").innerHTML = `${n}`;
+ ti= months[d.getMonth()]+' '+d.getDate()+' '+d.getFullYear();
+document.getElementById("mytime").innerHTML = `${ti}`;
+
+  </script>
+  <script src="https://kit.fontawesome.com/b63e393a8e.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+
+
+</html>

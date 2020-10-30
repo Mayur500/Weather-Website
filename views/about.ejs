@@ -1,0 +1,74 @@
+<%- include('./layouts/header.ejs')%>
+<body>
+  <%- include('./layouts/navbar.ejs')%>
+   <style>
+    html {
+      box-sizing: border-box;
+    }
+   .column {
+       position: absolute;
+       left:50%;
+       transform: translateX(-50%);
+      width: 33.3%;
+      margin-bottom: 16px;
+      padding: 0 8px;
+    }
+    
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      margin: 8px;
+    }
+    
+    .about-section {
+      padding: 50px;
+      text-align: center;
+      background-color: #474e5d;
+      color: white;
+    }
+    
+    .contain{
+      padding: 0 16px;
+      text-align: center;
+    }
+      .contain::after, .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .title {
+      color: grey;
+    }
+    
+
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+    </style>
+  
+ 
+  <div class="about-section">
+  <h1>About Us Page</h1>
+  <p>Web Developer | Competitive Programmer</p>
+ 
+</div>
+
+  <div class="column">
+    <div class="card">
+      <img src="./images/279-2795619_web-development-web-developer.png" alt="" style="width:100%">
+      <div class="contain">
+        <h2>Mayur Goyal</h2>
+        <p class="title">Mayur Goyal</p>
+        <p class="title">mayurgoyal500@gmail.com</p>
+      </div>
+    </div>
+  </div> 
+
+  <%- include('./layouts/footer.ejs')%>
+</body>
+<script src="https://kit.fontawesome.com/b63e393a8e.js" crossorigin="anonymous"></script>
+
+</html>
