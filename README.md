@@ -1,6 +1,6 @@
 # Weather-Website
 
-#INSTALLATION
+**INSTALLATION**
 
 After download or clone run npm install to install all the dependancies and download your api key from https://openweathermap.org/
 
